@@ -6,7 +6,7 @@ if number < 0:
     lastd = lastd * -1
 else:
     lastd = number % 10
-print('Last digit of', number, 'is', lastd, end =' ')
+print('Last digit of', number, 'is', lastd, end=' ')
 if lastd > 5:
     print('and is greater than 5')
 elif lastd == 0:
