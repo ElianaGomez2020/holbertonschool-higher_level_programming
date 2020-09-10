@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <Python.h>
+#include <python.h>
 /**
- * print_python_list_info -function 
+ * print_python_list_info -function
  * @p: pointer
- * Return: void 
+ * Return: void
  */
 void print_python_list_info(PyObject *p)
 {
@@ -12,8 +12,8 @@ void print_python_list_info(PyObject *p)
 	PyObject *itm = NULL;
 
 	printf("[*] Size of the python List = %ld\n", PyList_Size(p));
-	printf("[*] Allocated = %ld\n", ((PyListObject*)(p))->allocated);
-	for(; c < (Py_ssize_t)PyList_Size(p); c++)
+	printf("[*] Allocated = %ld\n", ((PyListObject *)(p))->allocated);
+	for (; c < (Py_ssize_t)PyList_Size(p); c++)
 	{
 		itm = PyList_GetItem(p, c);
 		printf("Element %i: %s", (int)c, itm->ob_type->tp_name);
