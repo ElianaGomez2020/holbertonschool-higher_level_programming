@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <Python.h>
+#include "/usr/include/python3.4m/Python.h"
 /**
  * print_python_list_info -function
  * @p: pointer
@@ -8,14 +8,12 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t c = 0;
-	PyObject *itm = NULL;
-
+	unsigned int c;
+	
 	printf("[*] Size of the python List = %ld\n", PyList_Size(p));
 	printf("[*] Allocated = %ld\n", ((PyListObject *)(p))->allocated);
-	for (; c < (Py_ssize_t)PyList_Size(p); c++)
+	for (c = 0; c < Py_SIZE(p); c++)
 	{
-		itm = PyList_GetItem(p, c);
-		printf("Element %i: %s", (int)c, itm->ob_type->tp_name);
+		printf("Element %i: %s\n", c, Py_TYPE(PyList_GetItem(p, c))->tp_name);
 	}
 }
