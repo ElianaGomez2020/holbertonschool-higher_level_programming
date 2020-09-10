@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "/usr/include/python3.4m/Python.h"
+#include <Python.h>
 /**
  * print_python_list_info -function
  * @p: pointer
