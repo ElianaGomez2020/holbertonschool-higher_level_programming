@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "/usr/include/python3.4m/Python.h"
-
+#include <Python.h>
+/**
+ * print_python_list_info -function 
+ * @p: pointer
+ * Return: void 
+ */
 void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t c = 0;
