@@ -1,4 +1,5 @@
-"""My first square class a private instance attribute"""
+#!/usr/bin/python3
+"""My first square class a private instance attribute init in 0"""
 
 
 class Square:
@@ -6,6 +7,7 @@ class Square:
     def __init__(self, size=0):
 	"""
         Init of objects
+
         Args:
             size(int): size of square
             conditionals to evaluate type of variable
