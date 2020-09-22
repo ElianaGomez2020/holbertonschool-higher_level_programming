@@ -5,7 +5,7 @@
 class Square:
     """Attribute size"""
     def __init__(self, size=0):
-	"""
+        """
         Init of objects
 
         Args:
