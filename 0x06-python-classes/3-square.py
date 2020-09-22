@@ -4,6 +4,12 @@
 class Square:
     """Attribute size"""
     def __init__(self, size=0):
+	"""
+        Init of objects
+        Args:
+            size(int): size of square
+            conditionals to evaluate type of variable
+        """
         if type(size) is not int:
             raise TypeError('size must be an integer')
         elif size < 0:
