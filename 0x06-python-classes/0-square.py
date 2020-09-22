@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""My first square class in python in this case is empty"""
+
+
 class Square:
-    """(python3 -c 'print(__import__("my_module").MyClass.__doc__)'))"""
-    def __init__(self, Scuare = {}):
-        self = {}
+    """Show square class"""
+    pass
