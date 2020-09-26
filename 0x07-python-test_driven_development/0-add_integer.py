@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-Module 
+Module
 a function that adds 2 integers
 """
 
