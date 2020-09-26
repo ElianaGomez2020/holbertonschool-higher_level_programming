@@ -1,0 +1,67 @@
+0. Integer add module
+====================
+Function
+========.
+Function that adds 2 integers.
+
+Operations
+==========
+a and b must be integers or floats, otherwise raise a TypeError exception
+with the message a must be an integer or b must be an integer:
+
+import module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Cases:
+
+Return sum of two numbers:
+    >>> add_integer(2, 4)
+    6
+
+Return a and b must be first casted to integers if they are float:
+    >>> add_integer(6.7, 4)
+    10
+
+Should return an error:
+    >>> add_integer(None, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Add two negative float 
+    >>> add_integer(-3.9, -2.3)
+    -5
+
+Add a negative float whit float positive:
+    >>> add_integer(-3.9, 5.3)
+    2
+
+Add a string with int:
+    >>> add_integer('2', 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Add a int with string:
+    >>> add_integer(2, '3')
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Adding with inf:
+    >>> add_integer(float('inf'), 2)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+Call empty function:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Call function with more than 2 arguments:
+    >>> add_integer(1, 2, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
