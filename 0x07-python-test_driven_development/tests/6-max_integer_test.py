@@ -30,3 +30,5 @@ class TestMaxInteger(unittest.TestCase):
 		"""Not number list"""
 		self.assertEqual(max_integer(['a', 'b', 'c']), a)
 		self.assertEqual(max_integer(('a', 'b', 'c')), a)
+#if __name__ == '_main__':
+ #   unittest.main()
