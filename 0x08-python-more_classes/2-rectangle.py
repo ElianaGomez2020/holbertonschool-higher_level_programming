@@ -53,3 +53,20 @@ class Rectangle:
                     self.__width = width
         else:
             raise TypeError("width must be an integer")
+
+    def area(self):
+        """This method computes the value of the rectangle's area
+        Returns:
+            [int] -- Value of the compute of area
+        """
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """This method computes the value of the rectangle's perimeter
+        Returns:
+            [int] -- Value of the compute of perimeter
+        """
+        if self.__width is 0 or self.__height is 0:
+            return 0
+        else:
+            return (2 * (self.__height + self.__width))
