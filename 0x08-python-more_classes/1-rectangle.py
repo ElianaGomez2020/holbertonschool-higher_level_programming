@@ -8,8 +8,8 @@ class Rectangle:
     This is rectangle class
     """
     def __init__(self, width=0, height=0):
-        """__init__ initialize metod an with a private inistance
-        attribute width and height
+        """ This __init__ initialize metod an with a private
+        inistance attribute width and height.
 
         Args:
             width . Defaults to 0.
@@ -20,14 +20,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """getter method height attribute
-        """
+        """getter method height attribute"""
         return self.__heigth
 
     @height.setter
     def height(self, value):
-        """setter method height attribute
-        """
+        """setter method height attribute"""
         if isinstance(value, int):
             if value < 0:
                 raise ValueError('height must be >= 0')
@@ -38,14 +36,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """getter method width attribute
-        """
+        """getter method width attribute"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setter method width attribute
-        """
+        """setter method width attribute"""
         if isinstance(value, int):
             if value < 0:
                 raise ValueError('width must be >= 0')
