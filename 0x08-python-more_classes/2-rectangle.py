@@ -1,64 +1,55 @@
 #!/usr/bin/python3
-"""This module define a Rectangle Class
-"""
+"""This mnodule define a Rectangule class"""
 
 
 class Rectangle:
-    """
-    This is rectangle class
-    """
-    def __init__(self, width=0, height=0):
-        """__init__ initialize metod an with a private inistance
-        attribute width and height
+    """This is a rectangule class"""
 
-        Args:
-            width . Defaults to 0.
-            height . Defaults to 0.
+    def __init__(self, width=0, height=0):
+        """This __init__ method initialize an instance with a private
+        instance attributte width and height.
+        Keyword Arguments:
+            width {int} -- Input value of width (default: {0})
+            height {int} -- Input value of height (default: {0})
         """
+
         self.width = width
         self.height = height
 
     @property
-    def width(self):
-        """getter method width attribute
+    def height(self):
+        """Height attribute getter method"""
+        return self.__height
+
+    @height.setter
+    def height(self, height):
+        """height attribute setter method
+        Arguments:
+            height {int} -- Input value of height
         """
+        if isinstance(height, int) is True:
+            if height < 0:
+                raise ValueError("height must be >= 0")
+            else:
+                    self.__height = height
+        else:
+            raise TypeError("height must be an integer")
+
+    @property
+    def width(self):
+        """Width attribute getter method"""
         return self.__width
 
     @width.setter
-    def width(self, value):
-        """setter method width attribute
+    def width(self, width):
+        """Width attribute setter method
+        Arguments:
+            width {int} -- Input value of height
         """
-        if not isinstance(value, int):
-            raise TypeError('width must be an integer')
-        if value < 0:
-            raise ValueError('width must be >= 0')
-        self.__width = value
-
-    @property
-    def height(self):
-        """getter method height attribute
-        """
-        return self.__heigth
-
-    @height.setter
-    def height(self, value):
-        """setter method height attribute
-        """
-        if not isinstance(value, int):
-            raise TypeError('height must be an integer')
-        if value < 0:
-            raise ValueError('height must be >= 0')
-        self.__height = value
-
-    def area(self):
-        """Return the rectangle area
-        """
-        return self.__height * self.__width
-
-    def perimeter(self):
-        """Return the rectangle parimeter
-        """
-        if self.__width == 0 or self.__height == 0:
-            return 0
+        if isinstance(width, int) is True:
+            if width < 0:
+                raise ValueError("width must be >= 0")
+            else:
+                    self.__width = width
         else:
-            return(self.__width + self.__height) * 2
+            raise TypeError("width must be an integer")
