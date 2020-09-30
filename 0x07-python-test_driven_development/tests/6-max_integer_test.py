@@ -1,33 +1,31 @@
 #!/usr/bin/python3
+"""Unittest for max_integer([..])
 """
-
-Unitests for max_integer 
-"""
-
-
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """[summary]
-
     Args:
-        unittest ([type]): [description]   
+        unittest ([type]): [description]
     """
 
-    def test_number_list(self)
-        """Number list cases"""
-        self.assertEqual(max_integer([1, 50, 2]), 50)
-        self.assertEqual(max_integer([-5, -10, -9]), -5)
-        self.assertEqual(max_integer([1]), 1)
-        self.assertEqual(max_integer([1, 1, 1, 1]), 1)
-        self.assertEqual(max_integer([2, 4] * 3), 4)
-
-    def test_empty(self)
-        """Empty lists """
+    def test_empty_list(self):
+        """Empty list case"""
         self.assertEqual(max_integer([]), None)
 
-    def test_not_list(self)
-        """Not number list"""
-        self.assertEqual(max_integer(['a', 'b', 'c']), a)
-        self.assertEqual(max_integer(('a', 'b', 'c')), a)
+    def test_not_a_list(self):
+        """ Not a number list cases"""
+        self.assertEqual(max_integer(['a', 'b', 'c']), 'c')
+        self.assertEqual(max_integer(('a', 'b', 'c')), 'c')
+
+    def test_number_list(self):
+        """Number list cases"""
+        self.assertEqual(max_integer([-3, -1, -2]), -1)
+        self.assertEqual(max_integer([8, 4, 5, 2]), 8)
+        self.assertEqual(max_integer([-1, 4, -3, 2]), 4)
+        self.assertEqual(max_integer([4, 4, 4, 4]), 4)
+        self.assertEqual(max_integer([4]), 4)
+
+#if __name__ == '__main__':
+ #   unittest.main()
