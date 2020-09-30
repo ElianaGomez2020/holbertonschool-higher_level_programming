@@ -14,54 +14,89 @@ import module:
 
 Cases:
 
-Return sum of two numbers:
-    >>> add_integer(2, 4)
-    6
+    >>> add_integer(1, 2)
+    3
 
-Return a and b must be first casted to integers if they are float:
-    >>> add_integer(6.7, 4)
-    10
+    >>> add_integer(-1, 2)
+    1
 
-Should return an error:
-    >>> add_integer(None, 3)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+    >>> add_integer(1, -2)
+    -1
 
-Add two negative float 
-    >>> add_integer(-3.9, -2.3)
-    -5
+    >>> add_integer(-1, -8)
+    -9
 
-Add a negative float whit float positive:
-    >>> add_integer(-3.9, 5.3)
-    2
+    >>> add_integer(5 , 4)
+    9
 
-Add a string with int:
-    >>> add_integer('2', 3)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+    >>> add_integer(8, -8)
+    0
 
-Add a int with string:
-    >>> add_integer(2, '3')
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
 
-Adding with inf:
-    >>> add_integer(float('inf'), 2)
-    Traceback (most recent call last):
-    ...
-    OverflowError: cannot convert float infinity to integer
+    >>> add_integer(1.0, 2.0)
+    3
 
-Call empty function:
+    >>> add_integer(-1.0, 2.0)
+    1
+
+    >>> add_integer(1.0, -2.0)
+    -1
+
+    >>> add_integer(-1.0, -8.0)
+    -9
+
+    >>> add_integer(5.0 , 4.0)
+    9
+
+    >>> add_integer(8.0, -8.0)
+    0
+
+    >>> add_integer(1)
+    99
+
+    >>> add_integer(-1)
+    97
+
+    >>> add_integer(2)
+    100
+
     >>> add_integer()
     Traceback (most recent call last):
-    ...
+        ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
-Call function with more than 2 arguments:
-    >>> add_integer(1, 2, 3)
+    >>> add_integer('1', 1)
     Traceback (most recent call last):
-    ...
-    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+        ...
+    TypeError: a must be an integer
+
+    add_integer(None, 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, 'b')
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer((1,2,3), 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, (1,2,3))
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer(1, float("inf"))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(1, float("nan"))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+    
