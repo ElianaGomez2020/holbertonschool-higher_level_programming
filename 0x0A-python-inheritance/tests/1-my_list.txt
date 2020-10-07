@@ -4,70 +4,63 @@ import Module
 Cases:
 
     
-    >>> descend = MyList([3, 2, 1])
-    >>> print(descend)
-    [3, 2, 1]
+Starting test:
 
-# simple ascend
-    >>> ascend = MyList([1, 2, 3])
-    >>> print(ascend)
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted() == my_list
+    [1, 2, 3, 4, 5]
+    False
+
+Test with String:
+
+    >>> my_list = MyList("aeiou")
+
+    >>> my_list
+    ['a', 'e', 'i', 'o', 'u']
+
+    >>> my_list.print_sorted()
+    ['a', 'e', 'i', 'o', 'u']
+
+Test with an empty list:
+
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+    >>> my_list.print_sorted()
+    []
+
+    >>> my_list.append(2)
+    >>> my_list.append(1)
+    >>> print(my_list)
+    [2, 1]
+    >>> my_list.print_sorted()
+    [1, 2]
+
+Test with negative number:
+
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-2)
+    >>> my_list.append(-3)
+    >>> my_list.print_sorted()
+    [-3, -2, -1]
+
+Test with sorted list:
+
+    >>> my_list = MyList([1, 2, 3])
+    >>> sortedlist = my_list.print_sorted()
     [1, 2, 3]
-
-# mixed list
-    >>> mixed = MyList([3, 1, 5, 4, 2])
-    >>> print(mixed)
-    [3, 1, 5, 4, 2]
-
-    >>> mixed.print_sorted()
-    [1, 2, 3, 4, 5]
-
-# append
-    >>> test = MyList()
-    >>> test.append(3)
-    >>> test.append(1)
-    >>> test.append(5)
-    >>> test.append(4)
-    >>> test.append(2)
-    >>> print(test)
-    [3, 1, 5, 4, 2]
-
-    >>> test.print_sorted()
-    [1, 2, 3, 4, 5]
-
-# empty
-    >>> empty1 = MyList([])
-    >>> print(empty1)
-    []
-
-    >>> empty1.print_sorted()
-    []
-
-# sorted new list
-    >>> list1 = MyList([3, 1, 5, 4, 2])
-    >>> newlist = list1
-    >>> newlist.print_sorted()
-    [1, 2, 3, 4, 5]
-
-# negative mixed
-    >>> negative = MyList([-3, -1, -5, -4, -2])
-    >>> print(negative)
-    [-3, -1, -5, -4, -2]
-
-    >>> negative.print_sorted()
-    [-5, -4, -3, -2, -1]
-
-# strings
-    >>> strings = MyList(["hello", "world", "holberton"])
-    >>> print(strings)
-    ['hello', 'world', 'holberton']
-
-    >>> strings.print_sorted()
-    ['hello', 'holberton', 'world']
-
-# bool
-    >>> bools = MyList([True, False, True])
-    >>> print(bools)
-    [True, False, True]
-
-    >>> bools.print_sorted()
-    [False, True, True]
+    >>> print(my_list)
+    [1, 2, 3]
+    >>> my_list is sortedlist
+    False
