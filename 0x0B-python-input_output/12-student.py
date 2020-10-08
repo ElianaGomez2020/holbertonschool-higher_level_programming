@@ -16,6 +16,6 @@ class Student:
             new_dic = {}
             for i in attrs:
                 if i in self.__dict__:
-                    new_dic[i] = self.__dict__
+                    new_dic[i] = self.__dict__[i]
             return new_dic
         return self.__dict__
