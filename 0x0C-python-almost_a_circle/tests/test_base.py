@@ -1,39 +1,39 @@
 #!/usr/bin/python3
-""" This is a Unittest module """
+"""
+    This is a file containing external tests associated with `base.py`
+    First, import the class `Base`
+    from `base` as `Base` and `unittest`
+"""
 import unittest
 from models.base import Base
 
 
-class TestBase(unittest.TestCase):
-    """ Test Cases for Base Class """
-    def setUp(self):
-        """This method set up initial state for all test methods"""
-        Base._Base__nb_objects = 0
-
-    def tearDown(self):
-        """This method to perform cleanup after each test method completes"""
-
-    def test_id_single(self):
-        """ Test for set id function """
-        b0 = Base(1)
-        self.assertEqual(b0.id, 1)
-
-    def test_id_none(self):
-        """ Test for set id function """
-        b0 = Base(None)
-        self.assertEqual(b0.id, 1)
-
-    def test_id_multiple(self):
-        """ Test for set id function """
-        b0 = Base()
+class TestBaseClass(unittest.TestCase):
+    '''
+        Class containing test methods for Base class
+    '''
+    def test_instantiation(self):
+        '''tests instantiation of Baseclass'''
+        b0 = Base(0)
+        self.assertEqual(b0.id, 0)
         b1 = Base()
-        self.assertEqual(b0.id, 1)
-        self.assertEqual(b1.id, 2)
+        self.assertEqual(b1.id, 1)
 
-    def test_id_error(self):
-        """ Test for set id function """
-        self.assertEqual("Juan", Base("Juan").id)
-        self.assertEqual(2.5, Base(2.5).id)
-        self.assertEqual([1, 2], Base([1, 2]).id)
-        self.assertEqual({'1': 2}, Base({'1': 2}).id)
-        self.assertEqual(True, Base(True).id)
+    def test_inheritence(self):
+        ''' check that the instance is an instance of Base class
+        '''
+        b1 = Base(1)
+        self.assertIsInstance(b1, Base)
+
+    def test_nb_increment(self):
+        ''' test incrementation of the __nb_objects attribute
+            when no arg is sent
+        '''
+        b2 = Base()
+        self.assertEqual(b2.id, 2)
+        b3 = Base()
+        self.assertEqual(b3.id, 3)
+        b4 = Base()
+        self.assertEqual(b4.id, 4)
+        b5 = Base(9)
+        self.assertEqual(b5.id, 9)
