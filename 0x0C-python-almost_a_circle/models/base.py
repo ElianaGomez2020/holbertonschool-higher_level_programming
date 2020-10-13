@@ -52,3 +52,17 @@ class Base:
             new_ins.update(**dictionary)
             return(new_ins)
         return None
+    
+    @classmethod
+    def load_from_file(cls):
+        obj_list = []
+        filename = str(cls.__name__) + '.json'
+        try:
+            with open(filename, 'r', encoding='UTF-8') as f:
+                content = f.read()
+                obj_l = cls.from_json_string(content)
+                for ins_dict in obj_l:
+                    obj_list.append(cls.create(**ins_dict))
+                return obj_list
+        except FileNotFoundError:
+            return obj_list
