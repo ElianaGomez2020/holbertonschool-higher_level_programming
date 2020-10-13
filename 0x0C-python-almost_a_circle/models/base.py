@@ -55,6 +55,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """ load_from_file_csv """
         obj_list = []
         filename = str(cls.__name__) + '.json'
         try:
