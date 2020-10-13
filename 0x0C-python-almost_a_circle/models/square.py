@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """In this module it create a Class Square"""
-
 from models.rectangle import Rectangle
 
 
@@ -29,7 +28,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Update the argument of Square"""
         if len(args) != 0:
-            atrib = ["id", "size," "x", "y"]
+            atrib = ["id", "size", "x", "y"]
             for i, arg in enumerate(args):
                 setattr(self, atrib[i], arg)
         else:
