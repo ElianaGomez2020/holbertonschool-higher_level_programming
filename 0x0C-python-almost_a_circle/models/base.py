@@ -47,11 +47,13 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create and return an instance with all attribute set"""
-        if dictionary is not None:
-            new_ins = cls(2, 3)
-            new_ins.update(**dictionary)
-            return(new_ins)
-        return None
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new_inst = cls(1, 1)
+            else:
+                new_inst = cls(1)
+            new_inst.update(**dictionary)
+            return new_inst
 
     @classmethod
     def load_from_file(cls):
