@@ -46,7 +46,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Returns an instance with all attributes already set"""
+        """create and return an instance with all attribute set"""
         if dictionary is not None:
             new_ins = cls(2, 3)
             new_ins.update(**dictionary)
