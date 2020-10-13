@@ -5,11 +5,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """[summary]
-
-    Args:
-        Base ([type]): [description]
-    """
+    """[summary]"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """[summary]"""
         self.width = width
@@ -74,7 +70,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        print( '\n' * self.__y + (' ' * self.__x + "#" * self.width 
+        print( '\n' * self.__y + (' ' * self.__x + "#" * self.width
               + "\n") * self.height, end="")
 
     def __str__(self):
@@ -89,3 +85,8 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        return {'id': self.id, 'width': self.width,
+                'height': self.height,'x': self.x,
+                'y': self.y}
