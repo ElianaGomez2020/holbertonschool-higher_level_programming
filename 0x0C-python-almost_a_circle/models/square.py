@@ -11,6 +11,10 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
 
+    def __str__(self):
+        return('[Rectangle] ({}) {}/{} - {}'.format(self.id,
+               self.x, self.y, self.width))
+
     @property
     def size(self):
         """Getter method to size"""
@@ -21,10 +25,6 @@ class Square(Rectangle):
         """Setter method to size"""
         self.width = size
         self.height = size
-
-    def __str__(self):
-        return('[Rectangle] ({}) {}/{} - {}'.format(self.id,
-               self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
         """Update the argument of Square"""
