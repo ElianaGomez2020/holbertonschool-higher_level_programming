@@ -14,7 +14,7 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     dat = []
     for c in rows:
-        data.append(c[0])
+        dat.append(c[0])
     print(', '.join(dat))
 
     cur.close()
