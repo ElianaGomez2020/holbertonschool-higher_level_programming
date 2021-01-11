@@ -1,6 +1,7 @@
-"""t that fetches https://intranet.hbtn.io/status"""
+#!/usr/bin/python3
+"""that fetches https://intranet.hbtn.io/status"""
 
-import urllib.requests
+import requests
 
 if __name__ == '__main__':
     r = requests.get('https://intranet.hbtn.io/status')
