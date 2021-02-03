@@ -1,10 +1,9 @@
 #!/usr/bin/node
 
 function factorial (x) {
-    if (x === 0 || !x) {
-      return 1;
-    }
-    return x * factorial(x - 1);
+  if (x === 0 || !x) {
+    return 1;
   }
-  console.log(factorial(process.argv[2]));
-  
+  return x * factorial(x - 1);
+}
+console.log(factorial(process.argv[2]));
