@@ -7,9 +7,6 @@
                <img alt="contributors" src="https://img.shields.io/github/contributors/ElianaGomez2020/holbertonschool-higher_level_programming" target="_blank" />
           </a>
           <a href="https://github.com/ElianaGomez2020/holbertonschool-higher_level_programming" target="_blank">
-               <img alt="code-size" src="https://img.shields.io/github/languages/code-size/ElianaGomez2020/holbertonschool-higher_level_programming" />
-          </a>
-          <a href="https://github.com/ElianaGomez2020/holbertonschool-higher_level_programming" target="_blank">
                <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
           </a>
      </p>
