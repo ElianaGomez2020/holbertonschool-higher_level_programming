@@ -35,7 +35,7 @@
 
 </p>
 
-## Made with :heart_black: in
+## Made with :black_heart: in
 <img src="https://www.holbertonschool.com/holberton-logo.png"
      alt="Flow chart"
      style="float: left; margin-right: 10px;">
